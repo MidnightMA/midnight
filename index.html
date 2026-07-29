@@ -29,10 +29,15 @@
 <header class="site-header">
   <div class="container nav-wrap">
     <a href="index.html" class="brand">
-      <svg class="brand-mark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="12" cy="12" r="10" fill="var(--surface)"/>
-        <path d="M17 9C16.2 9.3 15.4 9.5 14.5 9.5C11.5 9.5 9 7 9 4C9 3.3 9.1 2.6 9.4 2C6.4 2.9 4.3 5.6 4.3 8.8C4.3 12.7 7.5 15.9 11.4 15.9C14.4 15.9 16.9 14.1 18 11.5C17.6 11 17.2 10.5 17 9Z" fill="var(--ground-soft)"/>
-      </svg>
+    <svg class="brand-mark" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="moon">
+          <rect width="24" height="24" fill="white"/>
+          <circle cx="15" cy="10" r="7.5" fill="black"/>
+        </mask>
+      </defs>
+      <circle cx="11" cy="12" r="8" fill="currentColor" mask="url(#moon)"/>
+    </svg>
       <span class="brand-text">Midnight</span>
     </a>
     <nav class="nav-links" aria-label="Primary">
