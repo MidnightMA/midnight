@@ -36,13 +36,30 @@ rounded everything, gentle breathing animations, and a custom moon mascot.
 5. Save. GitHub will give you a URL like `https://yourusername.github.io/repo-name/`.
 6. That's it — no build step required, it's ready as-is.
 
-## Replacing the photography placeholders
+## Adding your own photos
 
-Open `photography.html` and look for the `<img>` tags inside `.gallery-grid`.
-Each one currently points to a placeholder SVG in `images/`. Swap the `src`
-to your own photo (jpg/png/webp all work), keep the `data-category`
-attribute so the filter buttons keep working, and try to keep a roughly
-4:5 portrait crop for the tidiest grid.
+The gallery is entirely data-driven — open `js/gallery.js` and edit the
+`PHOTOS` array at the top. Each entry is just:
+
+```js
+{ src: 'images/your-photo.jpg', category: 'nature', ratio: '3/4' }
+```
+
+- `src` — path to the image file (drop your real photos into `images/`)
+- `category` — one of `nature`, `street`, `architecture`, `random` (or add
+  your own — just also add a matching filter button in `photography.html`
+  and a label in the `CATEGORY_LABELS` object)
+- `ratio` — the photo's aspect ratio as `"width/height"` (e.g. `"3/4"`,
+  `"4/3"`, `"16/9"`, `"9/16"`, `"1/1"`). This reserves the right amount of
+  space before the image finishes loading so the masonry grid doesn't jump
+  around — set it to whatever ratio your photo actually is.
+
+Nothing in `photography.html` needs to change — the page just has an empty
+`.gallery-grid` container that JS fills in. The layout itself is a true
+masonry (CSS multi-column with `break-inside: avoid`), so photos of mixed
+orientations and ratios sit together naturally, Pinterest-style, with no
+JS layout library involved. Order doesn't matter — columns fill
+top-to-bottom automatically.
 
 ## Adding a new project
 

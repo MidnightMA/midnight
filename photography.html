@@ -88,45 +88,11 @@
       </div>
 
       <!--
-        NOTE FOR FUTURE ME: swap the src of each <img> below for a real photo
-        whenever it's ready. Keep the data-category attribute as-is so the
-        filters above keep working, and keep roughly a 4:5 portrait ratio
-        for the tidiest grid.
+        The 24 photos below are rendered by js/gallery.js from a single
+        PHOTOS data array — that's the only place you need to edit to add,
+        remove, or swap photos. This container just gets filled in.
       -->
-      <div class="gallery-grid">
-        <figure class="gallery-item reveal d1" data-category="nature">
-          <img src="images/nature-1.svg" alt="Placeholder — nature photograph, rolling hills at golden hour">
-          <figcaption class="gallery-caption">Nature · golden hour hills</figcaption>
-        </figure>
-        <figure class="gallery-item reveal d2" data-category="street">
-          <img src="images/street-1.svg" alt="Placeholder — street photograph, city skyline at dusk">
-          <figcaption class="gallery-caption">Street · dusk skyline</figcaption>
-        </figure>
-        <figure class="gallery-item reveal d3" data-category="architecture">
-          <img src="images/architecture-1.svg" alt="Placeholder — architecture photograph, geometric building facade">
-          <figcaption class="gallery-caption">Architecture · clean lines</figcaption>
-        </figure>
-        <figure class="gallery-item reveal d4" data-category="random">
-          <img src="images/random-1.svg" alt="Placeholder — a random captured moment">
-          <figcaption class="gallery-caption">Random · unplanned, kept anyway</figcaption>
-        </figure>
-        <figure class="gallery-item reveal d5" data-category="nature">
-          <img src="images/nature-2.svg" alt="Placeholder — nature photograph, mountain silhouettes at sunrise">
-          <figcaption class="gallery-caption">Nature · sunrise silhouettes</figcaption>
-        </figure>
-        <figure class="gallery-item reveal d6" data-category="street">
-          <img src="images/street-2.svg" alt="Placeholder — street photograph, pedestrians in soft light">
-          <figcaption class="gallery-caption">Street · soft light, quiet moment</figcaption>
-        </figure>
-        <figure class="gallery-item reveal d1" data-category="architecture">
-          <img src="images/architecture-2.svg" alt="Placeholder — architecture photograph, triangular rooftop shapes">
-          <figcaption class="gallery-caption">Architecture · shapes and shadow</figcaption>
-        </figure>
-        <figure class="gallery-item reveal d2" data-category="random">
-          <img src="images/random-2.svg" alt="Placeholder — a random captured moment, abstract shapes">
-          <figcaption class="gallery-caption">Random · found on a walk</figcaption>
-        </figure>
-      </div>
+      <div class="gallery-grid" aria-live="polite"></div>
 
     </div>
   </section>
