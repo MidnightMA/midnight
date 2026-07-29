@@ -1,118 +1,284 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr"> <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahdi Ahmadi - Photographer • AI Tinkerer • Linux Enthusiast</title>
-    <meta name="description" content="Welcome to the personal website of Mahdi Ahmadi - Photographer, AI Tinkerer, Linux Enthusiast, and Code Adventurer. Discover projects, blog, and more.">
-    <meta name="author" content="Mahdi Ahmadi">
-    <link rel="canonical" href="https://mahdi-ahmadi.ir/">
-    <meta property="og:title" content="Mahdi Ahmadi - Personal Website">
-    <meta property="og:description" content="Photographer • AI Tinkerer • Linux Enthusiast • Code Adventurer. Explore my world.">
-    <meta property="og:image" content="https://mahdi-ahmadi.ir/assets/images/og-image-placeholder.png"> <meta property="og:url" content="https://mahdi-ahmadi.ir/">
-    <meta property="og:type" content="website">
-    <meta name="keywords" content="Mahdi Ahmadi, Photographer, AI, Linux, Developer, Personal Website, Portfolio, Blog">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-    <style>
-        .hero-section {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative; /* For potential pseudo-elements or SVG blobs */
-            overflow: hidden; /* Contain animated blobs if any */
-        }
-         /* Optional: Subtle animated SVG blob for hero background */
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 120%; /* Larger than viewport */
-            height: 120%;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23581C87' d='M40.7,-58.4C52.7,-50.9,62.3,-40.1,69.8,-27.5C77.3,-14.9,82.6,-0.5,79.2,12.4C75.7,25.3,63.4,36.7,50.9,45.9C38.4,55.1,25.7,62.1,12.5,65.3C-0.7,68.5,-14.4,67.9,-27.5,63.4C-40.6,58.9,-53.1,50.5,-61.5,39.1C-69.9,27.7,-74.2,13.3,-72.9,0.1C-71.7,-13,-64.9,-26.1,-55.3,-34.8C-45.7,-43.6,-33.3,-48.2,-21.9,-53.4C-10.5,-58.6,-0.1,-64.5,10.4,-66.7C20.9,-68.9,31.6,-65.8,40.7,-58.4Z' transform='translate(100 100) scale(1.5)' /%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            opacity: 0.08; /* Very subtle */
-            transform: translate(-50%, -50%) rotate(0deg);
-            animation: rotateBlob 60s linear infinite;
-            z-index: 0;
-        }
-        @keyframes rotateBlob { 0% { transform: translate(-50%, -50%) rotate(0deg); } 100% { transform: translate(-50%, -50%) rotate(360deg); } }
-    </style>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Prevent theme flash: apply saved theme before first paint -->
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem('midnight-theme');
+    if (t === 'night' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.setAttribute('data-theme', 'night');
+    }
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Midnight — curious builder of odd, useful things</title>
+<meta name="description" content="Hi, I'm Midnight — a programmer, photographer, and AI tinkerer who builds strange, useful things and occasionally forgets to sleep.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><circle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22%23F4A573%22/></svg>">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
 </head>
-<body class="bg-slate-950 text-slate-300 font-light">
+<body>
 
-    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/70 backdrop-blur-xl shadow-2xl transition-all duration-300">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <a href="index.html" class="text-3xl font-bold text-white hover:text-purple-400 transition-colors duration-300">MAHDI AHMADI</a>
-                <nav class="hidden md:flex items-center space-x-6">
-                    <a href="index.html" class="text-slate-300 hover:text-purple-400 transition-colors duration-300 px-3 py-2 rounded-full text-sm font-medium">Home</a>
-                    <a href="about.html" class="text-slate-300 hover:text-purple-400 transition-colors duration-300 px-3 py-2 rounded-full text-sm font-medium">About</a>
-                    <a href="projects.html" class="text-slate-300 hover:text-purple-400 transition-colors duration-300 px-3 py-2 rounded-full text-sm font-medium">Projects</a>
-                    <a href="blog.html" class="text-slate-300 hover:text-purple-400 transition-colors duration-300 px-3 py-2 rounded-full text-sm font-medium">Blog</a>
-                    <a href="resume.html" class="text-slate-300 hover:text-purple-400 transition-colors duration-300 px-3 py-2 rounded-full text-sm font-medium">Resume</a>
-                    <a href="contact.html" class="text-slate-300 hover:text-purple-400 transition-colors duration-300 px-3 py-2 rounded-full text-sm font-medium">Contact</a>
-                </nav>
-                <div class="flex items-center space-x-4">
-                    <button id="lang-switcher" type="button" class="lang-switcher-btn bg-purple-600 hover:bg-purple-700 text-white text-xs">FA</button>
-                    <div class="md:hidden">
-                        <button id="mobile-menu-button" type="button" class="text-slate-300 hover:text-white focus:outline-none p-2 rounded-full" aria-controls="mobile-menu" aria-expanded="false">
-                            <span class="sr-only">Open main menu</span>
-                            <div class="space-y-1.5"><span class="block w-6 h-0.5 bg-current line line1"></span><span class="block w-6 h-0.5 bg-current line line2"></span><span class="block w-4 h-0.5 bg-current line line3 ml-auto"></span></div>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="md:hidden hidden transition-all duration-300 ease-in-out" id="mobile-menu" aria-hidden="true">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-900/95 backdrop-blur-md rounded-b-2xl shadow-xl">
-                <a href="index.html" class="block text-slate-300 hover:bg-purple-700 hover:text-white px-3 py-3 rounded-xl text-base font-medium transition-colors duration-200">Home</a>
-                <a href="about.html" class="block text-slate-300 hover:bg-purple-700 hover:text-white px-3 py-3 rounded-xl text-base font-medium transition-colors duration-200">About</a>
-                <a href="projects.html" class="block text-slate-300 hover:bg-purple-700 hover:text-white px-3 py-3 rounded-xl text-base font-medium transition-colors duration-200">Projects</a>
-                <a href="blog.html" class="block text-slate-300 hover:bg-purple-700 hover:text-white px-3 py-3 rounded-xl text-base font-medium transition-colors duration-200">Blog</a>
-                <a href="resume.html" class="block text-slate-300 hover:bg-purple-700 hover:text-white px-3 py-3 rounded-xl text-base font-medium transition-colors duration-200">Resume</a>
-                <a href="contact.html" class="block text-slate-300 hover:bg-purple-700 hover:text-white px-3 py-3 rounded-xl text-base font-medium transition-colors duration-200">Contact</a>
-            </div>
-        </div>
-    </header>
+<div class="page-veil"></div>
 
-    <main class="hero-section animated-gradient-background text-white text-center p-6 relative">
-        <div class="z-10 relative scroll-animate"> <h1 class="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-200 to-slate-100">
-                Mahdi Ahmadi
-            </h1>
-            <p class="text-xl md:text-2xl text-slate-300 font-light mb-12 max-w-3xl mx-auto leading-relaxed">
-                Photographer &bull; AI Tinkerer &bull; Linux Enthusiast &bull; Code Adventurer
-            </p>
-            <div class="space-y-4 sm:space-y-0 sm:flex sm:flex-row sm:justify-center sm:space-x-6">
-                <a href="projects.html" class="hero-btn hero-btn-primary inline-block bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3.5 px-10 rounded-full text-lg shadow-xl">
-                    See Projects
-                </a>
-                <a href="blog.html" class="hero-btn hero-btn-secondary inline-block bg-white/10 hover:bg-white/20 border-2 border-white/50 hover:border-white/80 text-white font-semibold py-3.5 px-10 rounded-full text-lg shadow-xl">
-                    Read Blog
-                </a>
-            </div>
-        </div>
-    </main>
+<!-- ============================ HEADER ============================ -->
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" fill="var(--surface)"/>
+        <path d="M17 9C16.2 9.3 15.4 9.5 14.5 9.5C11.5 9.5 9 7 9 4C9 3.3 9.1 2.6 9.4 2C6.4 2.9 4.3 5.6 4.3 8.8C4.3 12.7 7.5 15.9 11.4 15.9C14.4 15.9 16.9 14.1 18 11.5C17.6 11 17.2 10.5 17 9Z" fill="var(--ground-soft)"/>
+      </svg>
+      <span class="brand-text">Midnight</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="photography.html">Photography</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle day and night"><svg viewBox="0 0 24 24" fill="none"><path d="M20.5 14.5C19.28 15.09 17.9 15.42 16.45 15.42C11.4 15.42 7.3 11.32 7.3 6.27C7.3 4.82 7.63 3.44 8.22 2.22C4.52 3.4 1.83 6.87 1.83 10.97C1.83 16.02 5.93 20.12 10.98 20.12C15.08 20.12 18.55 17.43 19.73 13.73C19.99 13.98 20.25 14.24 20.5 14.5Z" fill="currentColor"/></svg></button>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
 
-    <footer class="bg-slate-950 border-t border-slate-800 py-12 text-center">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-slate-400 text-sm font-light">
-                &copy; <span id="currentYear">2025</span> Mahdi Ahmadi. All rights reserved.
-                <br class="sm:hidden"> Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:text-purple-300 transition-colors">GitHub Pages</a>.
-            </p>
-            <div class="mt-6 flex justify-center space-x-6">
-                <a href="https://t.me/Ahmadi_py" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-purple-400 transition-colors"><span class="sr-only">Telegram</span><i class="ti ti-brand-telegram text-2xl"></i></a>
-                <a href="mailto:mahdi@example.com" class="text-slate-400 hover:text-purple-400 transition-colors"><span class="sr-only">Email</span><i class="ti ti-mail text-2xl"></i></a>
-            </div>
-        </div>
-    </footer>
+<main>
 
-    <script src="js/main.js"></script>
+  <!-- ============================ HERO ============================ -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <div class="eyebrow">🌙 currently awake, as usual</div>
+        <h1 class="hero-greeting">Hi, I'm <span class="script">Midnight</span>.</h1>
+        <p class="lede">
+          I spend my days teaching computers new tricks, my evenings arguing with a
+          terminal that lives inside a Linux box I'm far too attached to, and my nights
+          convinced that one more idea before bed is always a good idea. I take photos
+          with cameras older than some of my code, model little worlds in Blender,
+          train models that occasionally do what I ask, and build things mostly because
+          I can't help it. Somewhere between a keyboard, a camera, and a sketchy 3am
+          hypothesis, that's me — probably a little too curious for my own good, and
+          completely at peace with that.
+        </p>
+        <div class="hero-cta">
+          <a href="projects.html" class="btn btn-primary">See what I'm building</a>
+          <a href="photography.html" class="btn btn-ghost">Peek at my photos</a>
+        </div>
+      </div>
+
+      <div class="hero-art reveal d2" aria-hidden="false">
+        <!-- Signature illustration: Midnight, the round moon mascot -->
+        <svg class="mascot" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a friendly round moon character, orbited by tiny icons for code, sparkles, a camera, and a cube">
+          <defs>
+            <linearGradient id="moonGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="var(--surface)"/>
+              <stop offset="100%" stop-color="var(--surface-deep)"/>
+            </linearGradient>
+          </defs>
+
+          <!-- soft ambient glow -->
+          <circle cx="200" cy="212" r="168" fill="var(--surface)" opacity="0.14"/>
+
+          <!-- little twinkling stars -->
+          <path class="twinkle" d="M120 56 L124 68 L136 72 L124 76 L120 88 L116 76 L104 72 L116 68 Z" fill="var(--lavender)"/>
+          <circle class="twinkle" style="animation-delay:0.9s" cx="292" cy="66" r="4" fill="var(--sage)"/>
+          <circle class="twinkle" style="animation-delay:1.5s" cx="352" cy="200" r="3.5" fill="var(--lavender)"/>
+          <circle class="twinkle" style="animation-delay:0.4s" cx="42" cy="220" r="3" fill="var(--sage)"/>
+
+          <!-- orbiting satellite badges -->
+          <g class="floaty">
+            <circle cx="64" cy="108" r="32" fill="var(--lavender)"/>
+            <path d="M54 98 L44 108 L54 118" stroke="var(--white)" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M74 98 L84 108 L74 118" stroke="var(--white)" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+
+          <g class="floaty floaty-delay-1">
+            <circle cx="332" cy="118" r="32" fill="var(--sage)"/>
+            <path d="M332 100 L337 114 L351 118 L337 122 L332 136 L327 122 L313 118 L327 114 Z" fill="var(--white)"/>
+          </g>
+
+          <g class="floaty floaty-delay-2">
+            <circle cx="58" cy="308" r="32" fill="var(--sage)"/>
+            <rect x="41" y="299" width="34" height="22" rx="6" fill="none" stroke="var(--white)" stroke-width="3.5"/>
+            <circle cx="58" cy="310" r="7" fill="none" stroke="var(--white)" stroke-width="3.5"/>
+          </g>
+
+          <g class="floaty floaty-delay-3">
+            <circle cx="336" cy="300" r="32" fill="var(--lavender)"/>
+            <path d="M336 284L350 291.5V306.5L336 314L322 306.5V291.5L336 284Z" stroke="var(--white)" stroke-width="3.2" stroke-linejoin="round" fill="none"/>
+            <path d="M322 291.5L336 299L350 291.5" stroke="var(--white)" stroke-width="3.2" stroke-linejoin="round" fill="none"/>
+          </g>
+
+          <!-- the moon itself -->
+          <g class="breathing" style="transform-origin:200px 212px;">
+            <circle cx="200" cy="212" r="112" fill="url(#moonGrad)"/>
+            <ellipse cx="152" cy="164" rx="14" ry="10" fill="rgba(27,58,71,0.08)"/>
+            <ellipse cx="253" cy="248" rx="10" ry="8" fill="rgba(27,58,71,0.08)"/>
+            <ellipse cx="150" cy="232" rx="15" ry="8" fill="var(--surface-deep)" opacity="0.45"/>
+            <ellipse cx="250" cy="232" rx="15" ry="8" fill="var(--surface-deep)" opacity="0.45"/>
+
+            <g class="mascot-eye">
+              <ellipse cx="168" cy="202" rx="12" ry="14" fill="var(--white)"/>
+              <circle class="mascot-pupil" cx="168" cy="205" r="6" fill="var(--ink)"/>
+            </g>
+            <g class="mascot-eye delay">
+              <ellipse cx="232" cy="202" rx="12" ry="14" fill="var(--white)"/>
+              <circle class="mascot-pupil" cx="232" cy="205" r="6" fill="var(--ink)"/>
+            </g>
+            <path d="M180 237 Q200 253 220 237" stroke="var(--ink)" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ QUICK GLANCE ============================ -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">the short version</div>
+        <h2>A handful of hats, worn at the same time</h2>
+        <p>None of these are side projects from each other — they all feed the same curiosity.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card reveal d1">
+          <div class="project-icon" style="background:color-mix(in srgb, var(--lavender) 30%, transparent);">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8.5 7L3.5 12L8.5 17" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5 7L20.5 12L15.5 17" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.2 4.5L10.8 19.5" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Programmer</h3>
+          <p class="text-secondary">Teaching computers new tricks in Python, C++, and JavaScript — then trying to make them actually useful.</p>
+        </div>
+        <div class="card reveal d2">
+          <div class="project-icon" style="background:color-mix(in srgb, var(--salmon) 30%, transparent);">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="7" width="19" height="13" rx="3" stroke="var(--ink)" stroke-width="1.8"/><circle cx="12" cy="13.5" r="3.6" stroke="var(--ink)" stroke-width="1.8"/><path d="M8 7L9.3 4.5H14.7L16 7" stroke="var(--ink)" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Photographer</h3>
+          <p class="text-secondary">Hunting for light with a Fujifilm that's older than my coding career, and loving every second of it.</p>
+        </div>
+        <div class="card reveal d3">
+          <div class="project-icon" style="background:color-mix(in srgb, var(--sage) 30%, transparent);">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 3.5C6.79 3.5 5 5.29 5 7.5C3.62 7.5 2.5 8.62 2.5 10C2.5 11 3.06 11.86 3.88 12.29C3.63 12.75 3.5 13.28 3.5 13.83C3.5 15.66 4.98 17.14 6.81 17.14C6.81 18.95 8.28 20.5 10.1 20.5C11.92 20.5 13.5 18.98 13.5 17.14V7.5C13.5 5.29 11.71 3.5 9.5 3.5H9Z" stroke="var(--ink)" stroke-width="1.5" stroke-linejoin="round"/><path d="M15 3.5C17.21 3.5 19 5.29 19 7.5C20.38 7.5 21.5 8.62 21.5 10C21.5 11 20.94 11.86 20.12 12.29C20.37 12.75 20.5 13.28 20.5 13.83C20.5 15.66 19.02 17.14 17.19 17.14C17.19 18.95 15.72 20.5 13.9 20.5C12.08 20.5 10.5 18.98 10.5 17.14V7.5C10.5 5.29 12.29 3.5 14.5 3.5H15Z" stroke="var(--ink)" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>AI tinkerer</h3>
+          <p class="text-secondary">Running local models, poking at machine learning, and enjoying the moments things almost make sense.</p>
+        </div>
+        <div class="card reveal d4">
+          <div class="project-icon" style="background:color-mix(in srgb, var(--lavender) 30%, transparent);">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2.5L21 7.5V16.5L12 21.5L3 16.5V7.5L12 2.5Z" stroke="var(--ink)" stroke-width="1.8" stroke-linejoin="round"/><path d="M3 7.5L12 12.5L21 7.5" stroke="var(--ink)" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 12.5V21.5" stroke="var(--ink)" stroke-width="1.8"/></svg>
+          </div>
+          <h3>3D maker</h3>
+          <p class="text-secondary">Turning ideas into objects in Blender and SOLIDWORKS — digital first, sometimes physical too.</p>
+        </div>
+        <div class="card reveal d5">
+          <div class="project-icon" style="background:color-mix(in srgb, var(--salmon) 30%, transparent);">
+            <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="14.5" rx="6" ry="7" stroke="var(--ink)" stroke-width="1.8"/><circle cx="9.6" cy="12.5" r="1" fill="var(--ink)"/><circle cx="14.4" cy="12.5" r="1" fill="var(--ink)"/><path d="M9 5.5C9 4 9.5 2.5 12 2.5C14.5 2.5 15 4 15 5.5" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Linux devotee</h3>
+          <p class="text-secondary">My terminal is basically a second home. I visit Windows sometimes, mostly out of politeness.</p>
+        </div>
+        <div class="card reveal d6">
+          <div class="project-icon" style="background:color-mix(in srgb, var(--sage) 30%, transparent);">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2.5C13.3 6.4 15.6 8.7 19.5 10C15.6 11.3 13.3 13.6 12 17.5C10.7 13.6 8.4 11.3 4.5 10C8.4 8.7 10.7 6.4 12 2.5Z" fill="var(--ink)"/></svg>
+          </div>
+          <h3>Student, mostly</h3>
+          <p class="text-secondary">Currently getting ready for the Konkur — and yes, still finding time to build things anyway.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ FUN FACTS ============================ -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">proof I'm a little unusual</div>
+        <h2>Fun facts, gathered at odd hours</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card fact-card reveal d1">
+          <div class="fact-emoji">🛰</div>
+          <div><h3>Homemade star tracker</h3><p class="text-secondary">Built one from spare parts because buying one felt like cheating.</p></div>
+        </div>
+        <div class="card fact-card reveal d2">
+          <div class="fact-emoji">🐧</div>
+          <div><h3>Linux feels like home</h3><p class="text-secondary">Windows is where I visit. Linux is where I live.</p></div>
+        </div>
+        <div class="card fact-card reveal d3">
+          <div class="fact-emoji">🤖</div>
+          <div><h3>Teaching computers to think</h3><p class="text-secondary">With mixed, occasionally alarming, results.</p></div>
+        </div>
+        <div class="card fact-card reveal d4">
+          <div class="fact-emoji">📷</div>
+          <div><h3>Old cameras deserve adventures</h3><p class="text-secondary">Mine has seen more sunrises than I have.</p></div>
+        </div>
+        <div class="card fact-card reveal d5">
+          <div class="fact-emoji">🌙</div>
+          <div><h3>Night is prime idea time</h3><p class="text-secondary">Most of my best (and worst) ideas arrive after midnight. Fitting, really.</p></div>
+        </div>
+        <div class="card fact-card reveal d6">
+          <div class="fact-emoji">☕</div>
+          <div><h3>Runs on tea and stubbornness</h3><p class="text-secondary">A dangerous combination for debugging at 2am.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ CTA ============================ -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="card center reveal" style="padding: var(--sp-5) var(--sp-3); max-width:760px;">
+        <h2 class="mb-2">Curious what I've actually been building?</h2>
+        <p class="text-secondary mb-3">From a Persian AI assistant to a homemade OpenAI-compatible server, the projects page has the receipts.</p>
+        <a href="projects.html" class="btn btn-primary">Take a look at my projects</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <svg class="brand-mark" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="var(--surface)"/></svg>
+          <span>Midnight</span>
+        </a>
+        <p>A curious corner of the internet where code, cameras, and a slightly nocturnal brain collide.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="photography.html">Photography</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Find me</h4>
+          <a href="https://github.com/MidnightMA" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://t.me/MidnightMA" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://t.me/MA_Pics" target="_blank" rel="noopener">Photography channel</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Built with HTML, CSS, JavaScript, coffee, curiosity, and questionable sleep schedules. © <span id="current-year"></span> Midnight.
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

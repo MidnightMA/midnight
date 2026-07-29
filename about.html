@@ -1,137 +1,253 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Mahdi Ahmadi</title>
-    <meta name="description" content="Learn more about Mahdi Ahmadi, his interests, and background.">
-    <meta name="author" content="Mahdi Ahmadi">
-    <link rel="canonical" href="https://mahdi-ahmadi.ir/about.html">
-    <meta property="og:title" content="About Me - Mahdi Ahmadi">
-    <meta property="og:description" content="Learn more about Mahdi Ahmadi, his interests, and background.">
-    <meta property="og:image" content="https://mahdi-ahmadi.ir/assets/images/og-image-placeholder.png">
-    <meta property="og:url" content="https://mahdi-ahmadi.ir/about.html">
-    <meta property="og:type" content="website">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<meta charset="UTF-8">
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem('midnight-theme');
+    if (t === 'night' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.setAttribute('data-theme', 'night');
+    }
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Midnight</title>
+<meta name="description" content="Student, builder, and endlessly curious human. The story of how Midnight ended up juggling code, cameras, and Konkur prep.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><circle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22%23F4A573%22/></svg>">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
 </head>
-<body class="bg-gray-900 text-slate-200">
+<body>
 
-    <header class="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md shadow-lg">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <a href="index.html" class="text-2xl font-bold text-white hover:text-[#00aaff] transition-colors">
-                    MAHDI AHMADI <span class="text-sm font-normal block opacity-70">LOGO HERE</span>
-                </a>
-                <nav class="hidden md:flex space-x-6 items-center">
-                    <a href="index.html" class="text-slate-300 hover:text-white transition-colors px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                    <a href="about.html" class="text-slate-300 hover:text-white transition-colors px-3 py-2 rounded-md text-sm font-medium">About</a>
-                    <a href="projects.html" class="text-slate-300 hover:text-white transition-colors px-3 py-2 rounded-md text-sm font-medium">Projects</a>
-                    <a href="blog.html" class="text-slate-300 hover:text-white transition-colors px-3 py-2 rounded-md text-sm font-medium">Blog</a>
-                    <a href="resume.html" class="text-slate-300 hover:text-white transition-colors px-3 py-2 rounded-md text-sm font-medium">Resume</a>
-                    <a href="contact.html" class="text-slate-300 hover:text-white transition-colors px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-                </nav>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" type="button" class="text-slate-300 hover:text-white focus:outline-none focus:text-white" aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
+<div class="page-veil"></div>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" fill="var(--surface)"/>
+        <path d="M17 9C16.2 9.3 15.4 9.5 14.5 9.5C11.5 9.5 9 7 9 4C9 3.3 9.1 2.6 9.4 2C6.4 2.9 4.3 5.6 4.3 8.8C4.3 12.7 7.5 15.9 11.4 15.9C14.4 15.9 16.9 14.1 18 11.5C17.6 11 17.2 10.5 17 9Z" fill="var(--ground-soft)"/>
+      </svg>
+      <span class="brand-text">Midnight</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="photography.html">Photography</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle day and night"><svg viewBox="0 0 24 24" fill="none"><path d="M20.5 14.5C19.28 15.09 17.9 15.42 16.45 15.42C11.4 15.42 7.3 11.32 7.3 6.27C7.3 4.82 7.63 3.44 8.22 2.22C4.52 3.4 1.83 6.87 1.83 10.97C1.83 16.02 5.93 20.12 10.98 20.12C15.08 20.12 18.55 17.43 19.73 13.73C19.99 13.98 20.25 14.24 20.5 14.5Z" fill="currentColor"/></svg></button>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============================ INTRO ============================ -->
+  <section class="hero">
+    <div class="container">
+      <div class="reveal" style="max-width:720px;">
+        <div class="eyebrow">the story so far</div>
+        <h1 class="hero-greeting" style="font-size:var(--fs-h1);">Curiosity, mostly. A plan, occasionally.</h1>
+        <p class="lede">
+          I'm Midnight — a student who somehow ended up building software, taking photographs,
+          and modeling little 3D worlds, all while getting ready for one very large exam.
+          None of it was really planned. I just kept following the things that made me curious,
+          and it turned into a whole way of living.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ SCHOOL & KONKUR ============================ -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="about-block reveal">
+        <div class="about-icon" style="background:color-mix(in srgb, var(--lavender) 26%, transparent);">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M3 8L12 4L21 8L12 12L3 8Z" stroke="var(--ink)" stroke-width="1.7" stroke-linejoin="round"/><path d="M7 10V15.5C7 15.5 9 17.5 12 17.5C15 17.5 17 15.5 17 15.5V10" stroke="var(--ink)" stroke-width="1.7" stroke-linejoin="round"/><path d="M21 8V14" stroke="var(--ink)" stroke-width="1.7" stroke-linecap="round"/></svg>
         </div>
-        <div class="md:hidden hidden" id="mobile-menu" aria-hidden="true">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800/90 backdrop-blur-md rounded-b-lg">
-                <a href="index.html" class="block text-slate-300 hover:bg-[#002f4b] hover:text-white px-3 py-2 rounded-md text-base font-medium">Home</a>
-                <a href="about.html" class="block text-slate-300 hover:bg-[#002f4b] hover:text-white px-3 py-2 rounded-md text-base font-medium">About</a>
-                <a href="projects.html" class="block text-slate-300 hover:bg-[#002f4b] hover:text-white px-3 py-2 rounded-md text-base font-medium">Projects</a>
-                <a href="blog.html" class="block text-slate-300 hover:bg-[#002f4b] hover:text-white px-3 py-2 rounded-md text-base font-medium">Blog</a>
-                <a href="resume.html" class="block text-slate-300 hover:bg-[#002f4b] hover:text-white px-3 py-2 rounded-md text-base font-medium">Resume</a>
-                <a href="contact.html" class="block text-slate-300 hover:bg-[#002f4b] hover:text-white px-3 py-2 rounded-md text-base font-medium">Contact</a>
-            </div>
+        <div>
+          <h2>School, and the exam everyone talks about</h2>
+          <p class="mt-1">
+            I studied at <strong>Allameh Helli High School</strong> in Tehran, a place that pushed me to
+            take ideas seriously long before I knew what to do with them. These days I'm deep in
+            preparation for the <strong>Konkur</strong>, Iran's university entrance exam — and honestly,
+            I've started treating it less like a wall in my way and more like a big, well-defined
+            puzzle with a deadline. It's intense, sure, but I like problems with clear rules and
+            a finish line. This one just happens to come with practice tests.
+          </p>
+          <p class="mt-1">
+            Grades have never been the thing that pulled me forward — curiosity has always pulled
+            harder. I learn best by actually building something: a script that automates something
+            annoying, a tiny website, a model that finally trains without exploding. If a concept
+            survives contact with a real project, I know I actually understand it.
+          </p>
         </div>
-    </header>
+      </div>
 
-    <main class="pt-28 pb-16 min-h-screen">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <section class="mb-16 scroll-animate">
-                <h1 class="text-4xl font-bold text-center mb-2 text-white">About Me</h1>
-                <div class="w-20 h-1 bg-[#002f4b] mx-auto mb-10"></div>
-
-                <div class="max-w-3xl mx-auto bg-gray-800/70 custom-card p-8 rounded-xl shadow-2xl">
-                    <h2 class="text-2xl font-semibold text-white mb-4">Personal Biography</h2>
-                    <p class="text-slate-300 leading-relaxed">
-                        Hello! I'm Mahdi Ahmadi — a curious mind with a camera in one hand and a terminal window open in the other.
-<br><br>
-I’m a high school student from Tehran with a deep passion for AI and programming. When I’m not experimenting with Linux or deploying something on my home lab, I’m probably wandering around with my Fujifilm camera trying to capture the soul of a moment — or breaking something just to learn how to fix it.
-<br><br>
-I believe in learning by doing, pushing limits, and staying playful with technology. I love building things that blend logic with creativity — whether it’s an AI-powered news platform, a stylish static site, or just a cool Bash script that saves me time.
-<br><br>
-My journey’s just getting started, but I’m all in — curious, caffeinated, and ready to create.
-                        </p>
-                </div>
-            </section>
-
-            <section class="scroll-animate">
-                <h2 class="text-3xl font-bold text-center text-white mb-10">My Interests</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
-                    <div class="bg-gray-800 custom-card p-6 rounded-xl shadow-lg text-center hover:shadow-2xl hover:scale-105 transition-all duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00aaff" class="w-16 h-16 mx-auto mb-4">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" /> <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
-                          </svg>
-                        <h3 class="text-xl font-semibold text-white mb-2">Photography</h3>
-                        <p class="text-slate-400 text-sm">Capturing moments and perspectives.</p>
-                    </div>
-                    <div class="bg-gray-800 custom-card p-6 rounded-xl shadow-lg text-center hover:shadow-2xl hover:scale-105 transition-all duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00aaff" class="w-16 h-16 mx-auto mb-4">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
-                        </svg>
-                        <h3 class="text-xl font-semibold text-white mb-2">Coding</h3>
-                        <p class="text-slate-400 text-sm">Building solutions and exploring logic.</p>
-                    </div>
-                    <div class="bg-gray-800 custom-card p-6 rounded-xl shadow-lg text-center hover:shadow-2xl hover:scale-105 transition-all duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00aaff" class="w-16 h-16 mx-auto mb-4">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18.75 0h-1.5M4.5 12H3m18.75 0h-1.5m-16.5 3.75H3m12.75 4.5V21m1.5-4.5H21m-3.75 0h1.5m-12.75 0h1.5m9-16.5V3M21 8.25V3m-3.75 0v1.5M12 3v1.5m0 15V21m0-9v1.5m0 3V12m0-3.75V6M9.75 6H12m2.25 0h2.25M12 9.75V12m0 2.25V12m0-2.25h2.25M12 12H9.75M12 14.25V12m2.25 2.25h2.25M12 18v-1.5m2.25 3.75V18M9.75 18v-1.5m4.5-12H6M9 3.75H6.75M9 20.25h2.25m.75 0H15m2.25 0H15M9 20.25H6.75M15 3.75H12.75M15 20.25h2.25M18.75 9H21M18.75 15H21M9 3.75h2.25M15 3.75h-2.25M9 20.25H12m3 0h-3m3-2.25H12m0-12H9.75m2.25 0h2.25M9.75 12H12m2.25 0H12m2.25-2.25H12m0 4.5h2.25m-4.5 0H12m2.25 2.25H12m0 2.25h-2.25m4.5 0H12" /> <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <h3 class="text-xl font-semibold text-white mb-2">AI Tinkering</h3>
-                        <p class="text-slate-400 text-sm">Exploring artificial intelligence.</p>
-                    </div>
-                    <div class="bg-gray-800 custom-card p-6 rounded-xl shadow-lg text-center hover:shadow-2xl hover:scale-105 transition-all duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00aaff" class="w-16 h-16 mx-auto mb-4">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
-                        </svg>
-                        <h3 class="text-xl font-semibold text-white mb-2">Linux</h3>
-                        <p class="text-slate-400 text-sm">Embracing open-source & command line.</p>
-                    </div>
-                    <div class="bg-gray-800 custom-card p-6 rounded-xl shadow-lg text-center hover:shadow-2xl hover:scale-105 transition-all duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00aaff" class="w-16 h-16 mx-auto mb-4">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 20.25h12m-7.5-3.75V17.5a2.25 2.25 0 01-2.25-2.25V6.75A2.25 2.25 0 016 4.5h12A2.25 2.25 0 0120.25 6.75v8.5A2.25 2.25 0 0118 17.5v-2.25m-7.5 0h7.5m-12-9.75A2.25 2.25 0 003.75 4.5h16.5a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0018 4.5H6A2.25 2.25 0 003.75 6.75v8.5A2.25 2.25 0 006 17.5h2.25m9.75-13.5H3.75M3 6.75A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 6.75m-18 0v8.5A2.25 2.25 0 005.25 17.5h13.5A2.25 2.25 0 0021 15.25v-8.5" />
-                        </svg>
-                        <h3 class="text-xl font-semibold text-white mb-2">Servers & Homelab</h3>
-                        <p class="text-slate-400 text-sm">Managing systems and networks.</p>
-                    </div>
-                </div>
-            </section>
-
+      <div class="about-block reveal d1">
+        <div class="about-icon" style="background:color-mix(in srgb, var(--salmon) 26%, transparent);">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M8.5 7L3.5 12L8.5 17" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5 7L20.5 12L15.5 17" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.2 4.5L10.8 19.5" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round"/></svg>
         </div>
-    </main>
-
-    <footer class="bg-gray-900 border-t border-gray-700/50 py-8 text-center">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-slate-400 text-sm">
-                &copy; <span id="currentYear">2025</span> Mahdi Ahmadi. All rights reserved.
-                <br class="sm:hidden"> Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer" class="hover:text-[#00aaff] transition-colors">GitHub Pages</a>.
-            </p>
+        <div>
+          <h2>Code, and the practical kind</h2>
+          <p class="mt-1">
+            My programming home base is <strong>Python</strong>, with regular trips into
+            <strong>C++</strong> when I want to understand what's happening closer to the metal,
+            and <strong>JavaScript, HTML, and CSS</strong> whenever an idea needs a face people can
+            actually click on. On the backend I build with <strong>Django</strong>, and on the
+            frontend I genuinely enjoy writing plain HTML, CSS, and vanilla JavaScript — no
+            frameworks required to make something feel alive.
+          </p>
+          <p class="mt-1">
+            I spend most of my working hours inside <strong>Linux</strong>, and a growing amount of
+            them inside <strong>machine learning</strong> and <strong>AI</strong> experiments — running
+            local models, fine-tuning small things, and figuring out how to make language models
+            genuinely useful rather than just impressive. I'd rather ship something small that
+            actually works than write another toy example that only proves a concept. Practical
+            beats pretty, most days.
+          </p>
         </div>
-    </footer>
+      </div>
 
-    <script src="js/main.js"></script>
-    <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
+      <div class="about-block reveal d2">
+        <div class="about-icon" style="background:color-mix(in srgb, var(--sage) 26%, transparent);">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2.5L21 7.5V16.5L12 21.5L3 16.5V7.5L12 2.5Z" stroke="var(--ink)" stroke-width="1.8" stroke-linejoin="round"/><path d="M3 7.5L12 12.5L21 7.5" stroke="var(--ink)" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 12.5V21.5" stroke="var(--ink)" stroke-width="1.8"/></svg>
+        </div>
+        <div>
+          <h2>Turning ideas into objects</h2>
+          <p class="mt-1">
+            When I want to think in three dimensions instead of lines of code, I open
+            <strong>Blender</strong> or <strong>SOLIDWORKS</strong>. I'm not chasing a portfolio of
+            polished renders — I just like the process of taking something that only exists in my
+            head and giving it a shape, whether that shape stays digital or eventually becomes
+            something I can hold. There's something satisfying about designing a part, checking it
+            actually fits together, and knowing it could exist outside a screen if I wanted it to.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ SKILLS ============================ -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">the toolbox</div>
+        <h2>Skills, organized (mostly)</h2>
+        <p>Not an exhaustive list — just what I keep reaching for.</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card skill-group reveal d1">
+          <h3>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M8.5 7L3.5 12L8.5 17" stroke="var(--surface-deep)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5 7L20.5 12L15.5 17" stroke="var(--surface-deep)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Programming
+          </h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">C++</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">HTML</span>
+            <span class="skill-pill">CSS</span>
+            <span class="skill-pill">Django</span>
+          </div>
+        </div>
+
+        <div class="card skill-group reveal d2">
+          <h3>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 3.5C6.79 3.5 5 5.29 5 7.5C3.62 7.5 2.5 8.62 2.5 10C2.5 11 3.06 11.86 3.88 12.29C3.63 12.75 3.5 13.28 3.5 13.83C3.5 15.66 4.98 17.14 6.81 17.14C6.81 18.95 8.28 20.5 10.1 20.5C11.92 20.5 13.5 18.98 13.5 17.14V7.5C13.5 5.29 11.71 3.5 9.5 3.5H9Z" stroke="var(--surface-deep)" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            AI
+          </h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Machine Learning</span>
+            <span class="skill-pill">LLMs</span>
+            <span class="skill-pill">Prompt Engineering</span>
+            <span class="skill-pill">Local AI</span>
+          </div>
+        </div>
+
+        <div class="card skill-group reveal d3">
+          <h3>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2.5" y="7" width="19" height="13" rx="3" stroke="var(--surface-deep)" stroke-width="1.8"/><circle cx="12" cy="13.5" r="3.6" stroke="var(--surface-deep)" stroke-width="1.8"/></svg>
+            Creative
+          </h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Photography</span>
+            <span class="skill-pill">Blender</span>
+            <span class="skill-pill">SOLIDWORKS</span>
+          </div>
+        </div>
+
+        <div class="card skill-group reveal d4">
+          <h3>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="14.5" rx="6" ry="7" stroke="var(--surface-deep)" stroke-width="1.8"/><circle cx="9.6" cy="12.5" r="1" fill="var(--surface-deep)"/><circle cx="14.4" cy="12.5" r="1" fill="var(--surface-deep)"/></svg>
+            Systems
+          </h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Linux</span>
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">GitHub</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ QUOTE ============================ -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="center reveal" style="max-width:600px;">
+        <p class="script" style="font-size:1.8rem; color:var(--surface-deep);">
+          "Curiosity first. Everything else, I figure out along the way."
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <svg class="brand-mark" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="var(--surface)"/></svg>
+          <span>Midnight</span>
+        </a>
+        <p>A curious corner of the internet where code, cameras, and a slightly nocturnal brain collide.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="photography.html">Photography</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Find me</h4>
+          <a href="https://github.com/MidnightMA" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://t.me/MidnightMA" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://t.me/MA_Pics" target="_blank" rel="noopener">Photography channel</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Built with HTML, CSS, JavaScript, coffee, curiosity, and questionable sleep schedules. © <span id="current-year"></span> Midnight.
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

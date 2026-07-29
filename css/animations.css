@@ -1,0 +1,121 @@
+/* ==========================================================================
+   MIDNIGHT — motion library
+   Gentle. Slow. Breathing. Nothing bouncy, nothing sudden.
+   ========================================================================== */
+
+/* Drifting warm gradient ground */
+@keyframes driftGround {
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 100% 60%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Breathing — the signature Headspace move */
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.045); }
+}
+.breathing { animation: breathe 4s var(--ease-gentle) infinite; transform-origin: center; }
+.breathing-slow { animation: breathe 6s var(--ease-gentle) infinite; }
+.breathing-fast { animation: breathe 2.4s var(--ease-gentle) infinite; }
+
+/* Gentle floating (for orbiting mini-icons / illustrations) */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%      { transform: translateY(-14px) rotate(2deg); }
+}
+.floaty { animation: floaty 5s var(--ease-gentle) infinite; transform-box: fill-box; transform-origin: center; }
+.floaty-delay-1 { animation-delay: 0.6s; }
+.floaty-delay-2 { animation-delay: 1.4s; }
+.floaty-delay-3 { animation-delay: 2.1s; }
+
+/* Twinkle for stars */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.35; transform: scale(0.85); }
+  50%      { opacity: 1; transform: scale(1.1); }
+}
+.twinkle { animation: twinkle 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+/* Slow blink for the moon mascot */
+@keyframes blink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  96%           { transform: scaleY(0.1); }
+}
+.mascot-eye { animation: blink 5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.mascot-eye.delay { animation-delay: 0.15s; }
+
+/* Orbit rotation for tiny satellite icons around the mascot */
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+.orbit { animation: orbit 22s linear infinite; transform-box: fill-box; transform-origin: center; }
+
+/* Fade + rise on scroll reveal */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+}
+.reveal.is-visible {
+  animation: fadeInUp var(--dur-slow) var(--ease-gentle) forwards;
+}
+
+/* Stagger helper */
+.reveal.d1 { animation-delay: 0.08s; }
+.reveal.d2 { animation-delay: 0.16s; }
+.reveal.d3 { animation-delay: 0.24s; }
+.reveal.d4 { animation-delay: 0.32s; }
+.reveal.d5 { animation-delay: 0.4s; }
+.reveal.d6 { animation-delay: 0.48s; }
+
+/* Page load veil — soft fade, not a jarring wipe */
+@keyframes veilIn {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+@keyframes veilOut {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.page-veil.veil-enter { animation: veilIn var(--dur-slow) var(--ease-gentle) forwards; }
+.page-veil.veil-leave { animation: veilOut var(--dur-fast) var(--ease-gentle) forwards; }
+
+/* Loading dots pulse */
+@keyframes dotPulse {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.5; }
+  40%           { transform: scale(1); opacity: 1; }
+}
+.loader-dots span { animation: dotPulse 1.4s ease-in-out infinite; }
+.loader-dots span:nth-child(2) { animation-delay: 0.18s; }
+.loader-dots span:nth-child(3) { animation-delay: 0.36s; }
+
+/* Underline draw for nav/active link (subtle) */
+@keyframes drawUnderline {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* Gentle pop for buttons on click (not springy — just a soft press) */
+.btn:active, .filter-btn:active, .theme-toggle:active {
+  transform: scale(0.97);
+}
+
+/* Cloud/shape drift for hero background accents */
+@keyframes driftShape {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(18px, -12px); }
+  100% { transform: translate(0, 0); }
+}
+.drift { animation: driftShape 9s var(--ease-gentle) infinite; }
+
+/* Camera shutter blink used on photography page icon */
+@keyframes shutter {
+  0%, 100% { transform: scale(1); }
+  48% { transform: scale(0.85); }
+  52% { transform: scale(1); }
+}
+.shutter-icon { animation: shutter 3.6s ease-in-out infinite; }
