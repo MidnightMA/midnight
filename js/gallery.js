@@ -15,40 +15,37 @@
    ========================================================================== */
 
 const PHOTOS = [
-  { src: 'images/nature-01.svg',       category: 'nature',       ratio: '3/4'  },
-  { src: 'images/nature-02.svg',       category: 'nature',       ratio: '4/3'  },
-  { src: 'images/nature-03.svg',       category: 'nature',       ratio: '16/9' },
-  { src: 'images/nature-04.svg',       category: 'nature',       ratio: '9/16' },
-  { src: 'images/nature-05.svg',       category: 'nature',       ratio: '1/1'  },
-  { src: 'images/nature-06.svg',       category: 'nature',       ratio: '4/3'  },
-
-  { src: 'images/street-01.svg',       category: 'street',       ratio: '3/4'  },
-  { src: 'images/street-02.svg',       category: 'street',       ratio: '4/3'  },
-  { src: 'images/street-03.svg',       category: 'street',       ratio: '16/9' },
-  { src: 'images/street-04.svg',       category: 'street',       ratio: '9/16' },
-  { src: 'images/street-05.svg',       category: 'street',       ratio: '1/1'  },
-  { src: 'images/street-06.svg',       category: 'street',       ratio: '4/3'  },
-
-  { src: 'images/architecture-01.svg', category: 'architecture', ratio: '3/4'  },
-  { src: 'images/architecture-02.svg', category: 'architecture', ratio: '4/3'  },
-  { src: 'images/architecture-03.svg', category: 'architecture', ratio: '16/9' },
-  { src: 'images/architecture-04.svg', category: 'architecture', ratio: '9/16' },
-  { src: 'images/architecture-05.svg', category: 'architecture', ratio: '1/1'  },
-  { src: 'images/architecture-06.svg', category: 'architecture', ratio: '4/3'  },
-
-  { src: 'images/random-01.svg',       category: 'random',       ratio: '3/4'  },
-  { src: 'images/random-02.svg',       category: 'random',       ratio: '4/3'  },
-  { src: 'images/random-03.svg',       category: 'random',       ratio: '16/9' },
-  { src: 'images/random-04.svg',       category: 'random',       ratio: '9/16' },
-  { src: 'images/random-05.svg',       category: 'random',       ratio: '1/1'  },
-  { src: 'images/random-06.svg',       category: 'random',       ratio: '4/3'  },
+  { src: 'images/PA100008.JPG',                 category: 'creative', ratio: '3/4'  }, // گلدون صورتی با سبزه
+  { src: 'images/IMG_20251106_003505_842.jpg',  category: 'nature',   ratio: '1/1'  }, // ماه
+  { src: 'images/DSCF9783.JPG',                 category: 'animals',  ratio: '4/3'  }, // گربه
+  { src: 'images/DSCF8636.JPG',                 category: 'urban',    ratio: '3/4'  }, // برج آزادی
+  { src: 'images/DSCF8506.JPG',                 category: 'urban',    ratio: '4/3'  }, // برف شهری
+  { src: 'images/DSCF6810.JPG',                 category: 'urban',    ratio: '1/1'  }, // کوچه
+  { src: 'images/DSCF4857.JPG',                 category: 'interior', ratio: '5/4'  }, // پنجره
+  { src: 'images/DSCF4805.JPG',                 category: 'objects',  ratio: '4/3'  }, // گردو
+  { src: 'images/DSCF3020.JPG',                 category: 'nature',   ratio: '3/2'  }, // غروب
+  { src: 'images/DSCF2995.JPG',                 category: 'nature',   ratio: '3/4'  }, // حلزون
+  { src: 'images/DSCF2805.JPG',                 category: 'objects',  ratio: '3/4'  }, // بطری کنار دریا
+  { src: 'images/DSCF2786.JPG',                 category: 'objects',  ratio: '3/4'  }, // چای
+  { src: 'images/DSCF2775.JPG',                 category: 'urban',    ratio: '3/4'  }, // دیوار و گل
+  { src: 'images/DSCF1953.JPG',                 category: 'nature',   ratio: '16/9' }, // ابر
+  { src: 'images/DSCF1910.JPG',                 category: 'nature',   ratio: '4/3'  }, // حفره و آسمان
+  { src: 'images/DSCF1896.JPG',                 category: 'nature',   ratio: '3/4'  }, // گل
+  { src: 'images/DSCF1860.JPG',                 category: 'nature',   ratio: '3/4'  }, // مسیر
+  { src: 'images/DSCF1800.JPG',                 category: 'urban',    ratio: '3/4'  }, // برج خشتی
+  { src: 'images/DSCF0870.JPG',                 category: 'nature',   ratio: '3/4'  }, // دشت
+  { src: 'images/DSCF0827.JPG',                 category: 'nature',   ratio: '3/4'  }, // گل
+  { src: 'images/DSCF0197.JPG',                 category: 'nature',   ratio: '4/3'  }, // گل و آسمان
 ];
+
 
 const CATEGORY_LABELS = {
   nature: 'Nature',
-  street: 'Street',
-  architecture: 'Architecture',
-  random: 'Random moment',
+  creative: 'Creative',
+  animals: 'Animals',
+  urban: 'Urban',
+  interior: 'Interior',
+  objects: 'Objects'
 };
 
 document.addEventListener('DOMContentLoaded', () => {
